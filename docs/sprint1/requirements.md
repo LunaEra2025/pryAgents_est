@@ -21,6 +21,8 @@ Cuando algún campo está vacío, el sistema debe marcarlo en rojo y no enviar e
 4. [State-driven]  
 Mientras la cuenta esté desactivada, el sistema debe impedir el acceso.
 
+5. [Event-driven]
+Cuando una persona sin sesión acceda a la ruta principal del sistema, el sistema debe mostrar la pantalla de inicio de sesión.
 
 ## Requisito 2: Cierre de sesión
 **Historia:** Como usuario quiero cerrar sesión para proteger mi cuenta.

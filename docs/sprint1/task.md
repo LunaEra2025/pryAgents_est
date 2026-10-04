@@ -4,18 +4,19 @@ Reglas: hacer una tarea a la vez, probarla en el navegador y hacer commit antes 
 
 ## 1. Preparación
 - [ ] 1.1 Crear la estructura de carpetas MVC (models, views, controllers, public)
-- [ ] 1.2 Crear el archivo de configuración de la base de datos y la conexión con PDO (config/database.php)
-- [ ] 1.3 Crear el archivo .gitignore (excluir config/database.php y vendor/)
+- [ ] 1.2 Crear el archivo de configuración de la base de datos .env en la carpeta raiz del proyecto y la conexión con PDO (config/database.php)
+- [ ] 1.3 Crear el archivo .gitignore (excluir config/database.php y .env)
 
 ## 2. Base de datos
-- [ ] 2.1 Crear la conexión con la tabla `usuarios` (id, nombre, correo único, contrasena_hash, rol, activo, fecha_creacion)
-- [ ] 2.2 Insertar un usuario administrador inicial con la contraseña cifrada
+- [ ] 2.1 Conectar la aplicación mediante PDO a la base de datos existente y utilizar la tabla `usuarios` ya creada. No crear, modificar ni eliminar la base de datos ni sus tablas.
+- [ ] 2.2 Insertar el administrador inicial en la tabla `usuarios` existente solo si no existe ya; obtener sus datos de configuración y guardar su contraseña con `password_hash()`.
 
 ## 3. Modelo
 - [ ] 3.1 Crear `Usuario.php` con los métodos: buscarPorCorreo, crear, editar, desactivar y listar (Requisitos 1 y 3)
 
 
 ## 4. Inicio y cierre de sesión
+- [ ] 4.0 Crear public/index.php como punto de entrada y dirigir al usuario al login
 - [ ] 4.1 Crear la vista `login.php` con formulario, Bootstrap 5 y campos en rojo cuando falten (Requisito 1)
 - [ ] 4.2 Crear `AuthController.php` con el método de login usando `password_verify()` (Requisito 1)
 - [ ] 4.3 Mostrar el mensaje "Correo o contraseña incorrectos" y bloquear cuentas desactivadas (Requisito 1)

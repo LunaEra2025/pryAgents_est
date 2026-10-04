@@ -14,11 +14,17 @@
 - Consultas SQL siempre parametrizadas (PDO con consultas preparadas)
 - Contraseñas con `password_hash()` y `password_verify()`, nunca en texto plano
 
+### Frontend
+- El JavaScript debe escribirse en archivos independientes dentro de `public/assets/js/`.
+- No insertar JavaScript en línea dentro de archivos PHP o HTML.
+- Cargar los scripts externos con `defer` para que el HTML se procese antes de ejecutarlos.
+
 ## Reglas
 - Implementar solo lo que se pida
 - No modificar archivos de la carpeta docs/ ni AGENTS.md
-- No modificar config/database.php
 - Seguir los requisitos, el diseño y las tareas de la carpeta del sprint indicado en docs/
+- no uses composer dentro del proyecto
+- no crees la base de datos, ya está diseñado por separado en el SGBD
 
 ## nomenglatura
 - Clases: PascalCase (`UsuarioController`)
